@@ -1,0 +1,10 @@
+#System files
+.DS_Store
+Thumbs.db
+
+#Environment variables - VERY IMPORTANT for security later
+.env
+.env.local
+
+#Dependency directories - for when we add more advanced tools
+/node_modules
