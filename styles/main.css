@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .property-card {
+    @apply bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col;
+  }
+  .property-card-image-container {
+    @apply relative overflow-hidden;
+  }
+  .property-card-image {
+    @apply w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110;
+  }
+  .property-card-content {
+    @apply p-6 flex flex-col flex-grow;
+  }
+  .property-card-location {
+    @apply text-sm font-semibold text-blue-600 uppercase tracking-wider mb-1;
+  }
+  .property-card-title {
+    @apply text-2xl font-bold text-gray-900 mb-2;
+  }
+  .property-card-specs {
+    @apply text-gray-600 mb-4;
+  }
+  .property-card-amenities {
+    @apply flex items-center space-x-4 text-gray-700 mt-auto pt-4 border-t border-gray-100;
+  }
+  .amenity-item {
+    @apply flex items-center space-x-2;
+  }
+  .property-card-buttons {
+    @apply mt-6 flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0;
+  }
+  .btn {
+    @apply w-full text-center font-semibold py-2 px-4 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+  }
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400;
+  }
+}
+
