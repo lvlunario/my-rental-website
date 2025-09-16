@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 1. Brand Name Update -->
     <title>L&L Vacation Rentals | Maui & Philippines Getaways</title>
     
     <link href="./styles/main.css" rel="stylesheet">
@@ -25,11 +24,9 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- =========== Header Section =========== -->
     <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- 2. Brand Name Update -->
-            <a href="#" class="text-2xl font-bold text-gray-900">
+            <a href="./index.html" class="text-2xl font-bold text-gray-900">
                 L&L Vacation Rentals
             </a>
             <div class="hidden md:flex items-center space-x-8">
@@ -49,16 +46,14 @@
             <div class="absolute flex flex-col items-center self-end py-8 mt-2 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md rounded-lg">
                 <a href="#maui" class="text-gray-600 hover:text-blue-600">Maui Rentals</a>
                 <a href="#philippines" class="text-gray-600 hover:text-blue-600">Philippines Rental</a>
-                 <a href="#" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">
+                 <a href="./contact.html" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">
                     Contact Us
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- =========== Main Content =========== -->
     <main>
-        <!-- Hero Section -->
         <section class="relative h-[85vh] min-h-[500px] flex items-center justify-center text-white">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/103123/pexels-photo-103123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
             <div class="absolute inset-0 bg-black/50"></div>
@@ -75,7 +70,6 @@
             </div>
         </section>
 
-        <!-- =========== 3. New Structure: Maui Section =========== -->
         <section id="maui" class="py-24 bg-white">
              <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -84,42 +78,44 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                    
                     <!-- Kihei Property Card -->
-                    <article class="property-card group">
-                        <div class="property-card-image-container">
-                            <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Sunny condo complex in Kihei" class="property-card-image">
-                        </div>
-                        <div class="property-card-content">
-                            <p class="property-card-location">Kihei, Maui</p>
-                            <h3 class="property-card-title">Kihei Family Condo</h3>
-                            <p class="property-card-specs">2 Bedrooms / 2 Bathrooms</p>
-                            <div class="property-card-buttons">
-                                <a href="./properties/kihei.html" class="btn btn-primary">View Details</a>
-                                <a href="#" class="btn btn-secondary">Book on Airbnb</a>
+                    <a href="./properties/kihei.html" class="block property-card group">
+                        <article class="w-full h-full flex flex-col">
+                            <div class="property-card-image-container">
+                                <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Sunny condo complex in Kihei" class="property-card-image">
                             </div>
-                        </div>
-                    </article>
+                            <div class="property-card-content flex-grow">
+                                <p class="property-card-location">Kihei, Maui</p>
+                                <h3 class="property-card-title">Kihei Family Condo</h3>
+                                <p class="property-card-specs">2 Bedrooms / 2 Bathrooms</p>
+                            </div>
+                            <div class="property-card-buttons p-6 pt-0">
+                                <span class="btn btn-primary w-full">View Details</span>
+                            </div>
+                        </article>
+                    </a>
 
                     <!-- Maalaea Property Card -->
-                    <article class="property-card group">
-                        <div class="property-card-image-container">
-                            <img src="https://images.pexels.com/photos/2433985/pexels-photo-2433985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Oceanfront balcony view in Maalaea" class="property-card-image">
-                        </div>
-                        <div class="property-card-content">
-                            <p class="property-card-location">Maalaea, Maui</p>
-                            <h3 class="property-card-title">Maalaea Oceanfront Escape</h3>
-                            <p class="property-card-specs">1 Bedroom / 1 Bathroom</p>
-                            <div class="property-card-buttons">
-                                <a href="./properties/maalaea.html" class="btn btn-primary">View Details</a>
-                                <a href="#" class="btn btn-secondary">Book on Airbnb</a>
+                    <a href="./properties/maalaea.html" class="block property-card group">
+                         <article class="w-full h-full flex flex-col">
+                            <div class="property-card-image-container">
+                                <img src="https://images.pexels.com/photos/2433985/pexels-photo-2433985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Oceanfront balcony view in Maalaea" class="property-card-image">
                             </div>
-                        </div>
-                    </article>
+                            <div class="property-card-content flex-grow">
+                                <p class="property-card-location">Maalaea, Maui</p>
+                                <h3 class="property-card-title">Maalaea Oceanfront Escape</h3>
+                                <p class="property-card-specs">1 Bedroom / 1 Bathroom</p>
+                            </div>
+                            <div class="property-card-buttons p-6 pt-0">
+                               <span class="btn btn-primary w-full">View Details</span>
+                            </div>
+                        </article>
+                    </a>
                 </div>
              </div>
         </section>
 
-        <!-- =========== 4. New Structure: Philippines Section =========== -->
         <section id="philippines" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                <div class="text-center mb-16">
@@ -129,40 +125,40 @@
                
                <div class="max-w-5xl mx-auto">
                     <!-- Casa Deoasay Property Card -->
-                    <article class="property-card group md:flex-row">
-                        <div class="property-card-image-container md:w-1/2">
-                            <img src="https://images.pexels.com/photos/210552/pexels-photo-210552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Tropical villa with pool in the Philippines" class="property-card-image md:h-full">
-                        </div>
-                        <div class="property-card-content md:w-1/2">
-                            <p class="property-card-location">Napu, Badoc, Ilocos Norte</p>
-                            <h3 class="property-card-title">Casa De Oasay</h3>
-                            <p class="property-card-specs">Book the entire home, the pool, or the function hall for your next event.</p>
-                            <div class="property-card-amenities">
-                                <span class="amenity-item">Short-term Rental</span>
-                                <span class="amenity-item">Pool Access</span>
-                                <span class="amenity-item">Event Hall</span>
+                    <a href="./properties/casadeoasay.html" class="block property-card group md:flex-row">
+                        <article class="md:flex w-full">
+                            <div class="property-card-image-container md:w-1/2">
+                                <img src="https://images.pexels.com/photos/210552/pexels-photo-210552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Tropical villa with pool in the Philippines" class="property-card-image md:h-full">
                             </div>
-                            <div class="property-card-buttons">
-                                <a href="./properties/casadeoasay.html" class="btn btn-primary">View Offerings</a>
-                                <a href="#" class="btn btn-secondary">Inquire Now</a>
+                            <div class="property-card-content md:w-1/2 flex flex-col">
+                                <div class="flex-grow">
+                                    <p class="property-card-location">Napu, Badoc, Ilocos Norte</p>
+                                    <h3 class="property-card-title">Casa De Oasay</h3>
+                                    <p class="property-card-specs">Book the entire home, the pool, or the function hall for your next event.</p>
+                                    <div class="property-card-amenities">
+                                        <span class="amenity-item">Short-term Rental</span>
+                                        <span class="amenity-item">Pool Access</span>
+                                        <span class="amenity-item">Event Hall</span>
+                                    </div>
+                                </div>
+                                <div class="property-card-buttons mt-4">
+                                    <span class="btn btn-primary w-full">View Offerings</span>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </a>
                </div>
             </div>
        </section>
     </main>
     
-    <!-- =========== Footer Section =========== -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                 <div class="mb-4 md:mb-0">
-                    <!-- 5. Brand Name Update -->
                     <h3 class="text-xl font-bold">L&L Vacation Rentals</h3>
                     <p class="text-gray-400">Binan, Calabarzon, Philippines</p>
                 </div>
-                <!-- Social Media & Copyright -->
                 <p class="text-gray-400 text-sm">&copy; 2025 L&L Vacation Rentals. All Rights Reserved.</p>
             </div>
         </div>
