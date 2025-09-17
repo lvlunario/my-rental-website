@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kihei Condo Steps from the Beach | L&L Vacation Rentals</title>
+    <title>L&L Vacation Rentals | Kihei Family Condo</title>
     
-    <!-- The path to main.css is ../ because we are one folder deep -->
     <link href="../styles/main.css" rel="stylesheet">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,9 +22,8 @@
         }
     </script>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- =========== COMPLETE HEADER SECTION =========== -->
     <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="../index.html" class="text-2xl font-bold text-gray-900">
@@ -49,60 +46,159 @@
             <div class="absolute flex flex-col items-center self-end py-8 mt-2 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md rounded-lg">
                 <a href="../index.html#maui" class="text-gray-600 hover:text-blue-600">Maui Rentals</a>
                 <a href="../index.html#philippines" class="text-gray-600 hover:text-blue-600">Philippines Rental</a>
-                 <a href="../contact.html" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">Contact Us</a>
+                 <a href="../contact.html" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">
+                    Contact Us
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- =========== Main Content (Kihei Specific) =========== -->
     <main>
-        <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/261181/pexels-photo-261181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
-            <div class="absolute inset-0 bg-black/40"></div>
-            <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white">
-                <h1 class="text-5xl lg:text-6xl font-extrabold drop-shadow-lg">Steps from MAUI's BEST Beaches!</h1>
-                <p class="text-xl mt-4 drop-shadow-md max-w-2xl">Your 2-bedroom, 2-bathroom family condo in the heart of sunny Kihei.</p>
+        <!-- Property Hero Section -->
+        <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center text-white">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../assets/images/kihei/main.jpg');"></div>
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-2 drop-shadow-lg">
+                    Kihei Family Condo
+                </h1>
+                <p class="text-lg md:text-xl font-semibold max-w-3xl mx-auto drop-shadow-md">
+                   Steps from MAUI's BEST Beaches!
+                </p>
             </div>
         </section>
 
-        <section class="page-section">
+        <!-- Property Details Section -->
+        <section class="py-16 bg-white">
             <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:grid lg:grid-cols-3 lg:gap-12">
+                    
+                    <!-- Left Column: Main Details -->
                     <div class="lg:col-span-2">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">About the Property</h2>
-                        <p class="text-gray-600 leading-relaxed mb-8">
-                            Experience the ultimate beach vacation in our Kihei condo. Perfectly situated just a short walk from some of Maui's most renowned beaches, this is the ideal home base for your island adventures. This spacious 2-bedroom, 2-bathroom condo is perfect for families or couples. Enjoy modern amenities, a fully equipped kitchen, and a private lanai to soak in the tropical breeze after a day in the sun.
-                        </p>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-2">Amenities</h3>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-                            <li class="amenity-list-item"><span>Pool Access</span></li>
-                            <li class="amenity-list-item"><span>Full Kitchen & BBQ Area</span></li>
-                            <li class="amenity-list-item"><span>Air Conditioning</span></li>
-                            <li class="amenity-list-item"><span>Beach Gear Provided</span></li>
-                            <li class="amenity-list-item"><span>In-unit Laundry</span></li>
-                            <li class="amenity-list-item"><span>Free Parking</span></li>
-                        </ul>
-                    </div>
-                    <aside>
-                        <div class="booking-card">
-                            <h3 class="text-2xl font-bold text-center mb-2">Book Your Stay</h3>
-                            <p class="text-center text-gray-600 mb-6">Check availability and rates on Airbnb or send us a direct inquiry.</p>
-                            <div class="space-y-4">
-                               <a href="#" class="w-full btn btn-primary text-lg">Book on Airbnb</a>
-                               <a href="../contact.html" class="w-full btn btn-secondary text-lg">Inquire Directly</a>
+                        <!-- Property Highlights -->
+                        <div class="mb-10">
+                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                                <div class="bg-blue-50 p-6 rounded-lg">
+                                    <svg class="w-10 h-10 text-blue-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-12v4m-2-2h4m5 4v4m-2-2h4M5 21v-4m2 2H3m14-12v4m2-2h-4m-3 8v4m2-2h-4"></path></svg>
+                                    <h3 class="font-bold text-lg">Newly Renovated</h3>
+                                    <p class="text-sm text-gray-600">Completely updated in 2019 with a clean, contemporary feel.</p>
+                                </div>
+                                <div class="bg-blue-50 p-6 rounded-lg">
+                                    <svg class="w-10 h-10 text-blue-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    <h3 class="font-bold text-lg">Prime Location</h3>
+                                    <p class="text-sm text-gray-600">Walk to Charley Young and Kamaole I beaches with ease.</p>
+                                </div>
+                                <div class="bg-blue-50 p-6 rounded-lg">
+                                    <svg class="w-10 h-10 text-blue-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h8a2 2 0 002-2v-1a2 2 0 012-2h1.945C21.43 11 22 10.43 22 10v-1c0-.43-.57-1-1.055-1H19a2 2 0 01-2-2V5a2 2 0 00-2-2H9a2 2 0 00-2 2v1a2 2 0 01-2 2H3.055c-.585 0-1.055.57-1.055 1v1c0 .43.47 1 1.055 1z"></path></svg>
+                                    <h3 class="font-bold text-lg">Pool & Hot Tub</h3>
+                                    <p class="text-sm text-gray-600">Perfectly located corner unit close to the complex pool and amenities.</p>
+                                </div>
                             </div>
                         </div>
-                    </aside>
+
+                        <!-- About the Property -->
+                        <div class="prose max-w-none">
+                            <h2 class="section-title">About the Property</h2>
+                            <p>Experience one of the nicest units in South Kihei after its brand new renovation in April 2019! This beautiful 2-bedroom, 2-bathroom ground floor corner unit is perfectly situated close to the pool and hot tub, and just a short walk from the world-famous Charley Young and Kamaole I Beaches. With restaurants, shops, and services all nearby, you'd be hard-pressed to find a better value on Maui. Enjoy brand new black stainless Samsung appliances, including an in-unit Washer/Dryer, for your convenience.</p>
+
+                            <h3 class="font-bold mt-6">The Space</h3>
+                            <p>Our unique "floating" beds with 14" memory foam mattresses practically guarantee you'll sleep like a baby after an epic day of beach hopping, hiking, or exploring the Valley Isle. The open living area comfortably accommodates four adults and features a large 4K UHD LG TV with free cable and WiFi, ensuring that even a rare rainy day is a comfortable one.</p>
+                            
+                            <h3 class="font-bold mt-6">The Neighborhood</h3>
+                            <p>This condo is in the perfect location. You are right across the street from incredible beaches, a short drive from the exclusive Wailea area, and within walking distance to fantastic restaurants, live music, nightlife, and shopping. Discover why guests return to this spot year after year!</p>
+                        </div>
+                        
+                        <!-- Photo Gallery -->
+                        <div class="mt-12">
+                            <h2 class="section-title">Photo Gallery</h2>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+                                <img src="../assets/images/kihei/Living_Room_Kitchen.jpg" alt="Open living space from kitchen" class="gallery-image">
+                                <img src="../assets/images/kihei/Kitchen2.jpg" alt="Modern kitchen with stainless steel appliances" class="gallery-image">
+                                <img src="../assets/images/kihei/Master_Bedroom.jpg" alt="Master bedroom with contemporary feel" class="gallery-image">
+                                <img src="../assets/images/kihei/Second_Bedroom.jpg" alt="Second bedroom with comfortable beds" class="gallery-image">
+                                <img src="../assets/images/kihei/Lanai.jpg" alt="Private lanai for outdoor relaxation" class="gallery-image">
+                                <img src="../assets/images/kihei/Beach2.jpg" alt="Golden sands of a nearby Maui beach" class="gallery-image">
+                            </div>
+                        </div>
+
+                        <!-- Amenities -->
+                        <div class="mt-12">
+                            <h2 class="section-title">Amenities</h2>
+                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-6">
+                                <div class="amenity-group">
+                                    <h4 class="font-bold text-lg mb-2">Kitchen & Dining</h4>
+                                    <ul class="amenity-list">
+                                        <li>Full Kitchen with Granite Countertops</li>
+                                        <li>Black Stainless Samsung Appliances</li>
+                                        <li>Refrigerator, Stove, Oven, Microwave</li>
+                                        <li>Dishwasher & Coffee Maker</li>
+                                    </ul>
+                                </div>
+                                <div class="amenity-group">
+                                    <h4 class="font-bold text-lg mb-2">Entertainment</h4>
+                                    <ul class="amenity-list">
+                                        <li>Large 4K UHD LG TV</li>
+                                        <li>Free Cable TV</li>
+                                        <li>High-Speed WiFi</li>
+                                    </ul>
+                                </div>
+                                <div class="amenity-group">
+                                    <h4 class="font-bold text-lg mb-2">Comfort & Convenience</h4>
+                                    <ul class="amenity-list">
+                                        <li>In-Unit Washer & Dryer</li>
+                                        <li>Air Conditioning</li>
+                                        <li>"Floating" Beds with Memory Foam</li>
+                                        <li>Guest Book</li>
+                                    </ul>
+                                </div>
+                                <div class="amenity-group">
+                                    <h4 class="font-bold text-lg mb-2">Bathrooms</h4>
+                                    <ul class="amenity-list">
+                                        <li>Master Bath with Walk-in Shower</li>
+                                        <li>Second Bath with Bathtub</li>
+                                    </ul>
+                                </div>
+                             </div>
+                        </div>
+
+                        <!-- House Rules -->
+                        <div class="mt-12">
+                            <h2 class="section-title">House Rules</h2>
+                            <div class="prose max-w-none mt-6">
+                                <p>We have poured our blood, sweat, and tears into this little sanctuary. Please treat our home and our neighbors with respect.</p>
+                                <ul class="list-disc pl-5">
+                                    <li>Quiet hours are from 10:00 PM to 8:00 AM.</li>
+                                    <li>No smoking of any kind is permitted in the unit or on the lanai.</li>
+                                    <li>No pets are allowed.</li>
+                                    <li>Please remove shoes upon entering the condo.</li>
+                                    <li>Rinse off sand before entering the unit.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Sticky Booking Card -->
+                    <div class="lg:col-span-1 mt-12 lg:mt-0">
+                        <div class="sticky top-28 bg-white p-8 rounded-xl shadow-lg border">
+                            <h3 class="text-2xl font-bold mb-4">Book Your Getaway</h3>
+                            <div class="space-y-4">
+                               <a href="#" class="btn btn-secondary w-full">Book on Airbnb</a>
+                               <a href="../contact.html" class="btn btn-primary w-full">Inquire Directly</a>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-4 text-center">Please note: Quoted rate does not include State of Hawaii GET (4.167%) and TAT (10.25%) taxes. This will be added to your final booking total.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                 <div class="mb-4 md:mb-0">
                     <h3 class="text-xl font-bold">L&L Vacation Rentals</h3>
-                    <p class="text-gray-400">Kihei, Hawaii, United States</p>
+                    <p class="text-gray-400">Binan, Calabarzon, Philippines</p>
                 </div>
                 <p class="text-gray-400 text-sm">&copy; 2025 L&L Vacation Rentals. All Rights Reserved.</p>
             </div>
