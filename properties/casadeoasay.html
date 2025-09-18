@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Deoasay Transient Home | L&L Vacation Rentals</title>
+    <title>L&L Vacation Rentals | Casa Deoasay, Philippines</title>
     
     <link href="../styles/main.css" rel="stylesheet">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,17 +21,25 @@
             }
         }
     </script>
+    <style>
+        .modal-hidden { display: none; }
+        .modal-active { display: flex; }
+    </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50 text-gray-800">
 
     <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="../index.html" class="text-2xl font-bold text-gray-900">L&L Vacation Rentals</a>
+            <a href="../index.html" class="text-2xl font-bold text-gray-900">
+                L&L Vacation Rentals
+            </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="../index.html#maui" class="text-gray-600 hover:text-blue-600 transition duration-300">Maui Rentals</a>
                 <a href="../index.html#philippines" class="text-gray-600 hover:text-blue-600 transition duration-300">Philippines Rental</a>
             </div>
-            <a href="../contact.html" class="hidden md:inline-block bg-blue-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-blue-700 transition-transform duration-300 hover:scale-105">Contact Us</a>
+            <a href="../contact.html" class="hidden md:inline-block bg-blue-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-blue-700 transition-transform duration-300 hover:scale-105">
+                Contact Us
+            </a>
             <div class="md:hidden">
                 <button id="menu-btn" type="button" class="z-40 block hamburger md:hidden focus:outline-none">
                      <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -43,59 +50,174 @@
             <div class="absolute flex flex-col items-center self-end py-8 mt-2 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md rounded-lg">
                 <a href="../index.html#maui" class="text-gray-600 hover:text-blue-600">Maui Rentals</a>
                 <a href="../index.html#philippines" class="text-gray-600 hover:text-blue-600">Philippines Rental</a>
-                 <a href="../contact.html" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">Contact Us</a>
+                 <a href="../contact.html" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">
+                    Contact Us
+                </a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/15553681/pexels-photo-15553681.jpeg');">
-            <div class="absolute inset-0 bg-black/40"></div>
-            <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white">
-                <h1 class="text-5xl lg:text-6xl font-extrabold drop-shadow-lg">Casa De Oasay ~ Your Gateway to the NORTH!</h1>
-                <p class="text-xl mt-4 drop-shadow-md max-w-2xl">The perfect venue for family gatherings and events in Ilocos Norte. Sleeps 24.</p>
+        <!-- Property Hero Section -->
+        <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center text-white">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/221457/pexels-photo-221457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-2 drop-shadow-lg">
+                    Casa Deoasay
+                </h1>
+                <p class="text-lg md:text-xl font-semibold max-w-3xl mx-auto drop-shadow-md">
+                   casadeoasay ~ Your Gateway to the NORTH! Sleeps 24
+                </p>
             </div>
         </section>
 
-        <section class="page-section">
+        <!-- Property Details Section -->
+        <section class="py-16 bg-white">
             <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:grid lg:grid-cols-3 lg:gap-12">
+                    
+                    <!-- Left Column: Main Details -->
                     <div class="lg:col-span-2">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">About the Property</h2>
-                        <p class="text-gray-600 leading-relaxed mb-8">
-                           Welcome to Casa De Oasay, your private retreat in Napu, Badoc, Ilocos Norte. As your gateway to the wonders of the North, our home is the perfect base for large families and groups looking to explore the region. With accommodations for up to 24 guests, we are an ideal venue for birthdays, reunions, and weddings. The property can be booked for overnight stays, exclusive pool access, or as a function hall for your special events.
-                        </p>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-2">Features & Services</h3>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-                            <li class="amenity-list-item"><span>Large Private Pool</span></li>
-                            <li class="amenity-list-item"><span>Spacious Function Hall</span></li>
-                            <li class="amenity-list-item"><span>Accommodates 24+ Guests</span></li>
-                            <li class="amenity-list-item"><span>Air Conditioned Rooms</span></li>
-                            <li class="amenity-list-item"><span>Full Kitchen Access</span></li>
-                            <li class="amenity-list-item"><span>Secure On-site Parking</span></li>
-                        </ul>
-                    </div>
-                    <aside>
-                        <div class="booking-card">
-                            <h3 class="text-2xl font-bold text-center mb-2">Book Your Stay or Event</h3>
-                            <p class="text-center text-gray-600 mb-6">Contact us directly for transient stays, pool rentals, or function hall bookings.</p>
-                            <div class="space-y-4">
-                               <a href="../contact.html" class="w-full btn btn-primary text-lg">Inquire for All Bookings</a>
-                               <a href="#" class="w-full btn btn-secondary text-lg">See more on Facebook</a>
+                        <!-- Property Highlights -->
+                        <div class="mb-10">
+                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                                <div class="bg-blue-50 p-6 rounded-lg">
+                                    <svg class="w-10 h-10 text-blue-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    <h3 class="font-bold text-lg">Large Groups Welcome</h3>
+                                    <p class="text-sm text-gray-600">Comfortably sleeps up to 24 guests across 4 spacious bedrooms.</p>
+                                </div>
+                                <div class="bg-blue-50 p-6 rounded-lg">
+                                    <svg class="w-10 h-10 text-blue-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h8a2 2 0 002-2v-1a2 2 0 012-2h1.945C21.43 11 22 10.43 22 10v-1c0-.43-.57-1-1.055-1H19a2 2 0 01-2-2V5a2 2 0 00-2-2H9a2 2 0 00-2 2v1a2 2 0 01-2 2H3.055c-.585 0-1.055.57-1.055 1v1c0 .43.47 1 1.055 1z"></path></svg>
+                                    <h3 class="font-bold text-lg">Private Pool & Event Hall</h3>
+                                    <p class="text-sm text-gray-600">Ideal for family vacations, reunions, weddings, and special events.</p>
+                                </div>
+                                <div class="bg-blue-50 p-6 rounded-lg">
+                                     <svg class="w-10 h-10 text-blue-600 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    <h3 class="font-bold text-lg">Gateway to the North</h3>
+                                    <p class="text-sm text-gray-600">A short drive to Vigan, Laoag, and the beautiful beaches of Ilocos Norte.</p>
+                                </div>
                             </div>
                         </div>
-                    </aside>
+
+                        <!-- About the Property -->
+                        <div class="prose max-w-none">
+                            <h2 class="section-title">Your Private Resort in Ilocos Norte</h2>
+                            <p>Welcome to Casa Deoasay, your exclusive gateway to the stunning beauty of Northern Luzon! This spacious and welcoming home is the perfect venue for your next family vacation, reunion, or special event. With the capacity to sleep up to 24 people, our property offers a unique blend of comfort, convenience, and celebration. Whether you're booking the entire home for a large group, renting the function hall for a wedding or birthday, or simply looking for a relaxing day with access to our private pool, Casa Deoasay is your perfect destination.</p>
+
+                            <h3 class="font-bold mt-6">The Space</h3>
+                            <p>Our home features 4 large, air-conditioned bedrooms designed for comfort and relaxation. The open-plan living and dining areas provide ample space for everyone to gather, while the fully equipped kitchen allows you to prepare your own meals. Step outside to enjoy our pristine swimming pool and a dedicated function hall perfect for creating lasting memories.</p>
+                            
+                            <h3 class="font-bold mt-6">Guest Access & Neighborhood</h3>
+                            <p>Conveniently located in Napu, Badoc, the property is your ideal home base for exploring the rich culture and natural wonders of the Ilocos region. We are just a short drive from the historic city of Vigan, the vibrant city of Laoag, and the famous white sand beaches of Pagudpud. The property is easily accessible and offers ample, secure parking for your vehicles.</p>
+                        </div>
+                        
+                        <!-- Photo Gallery -->
+                        <div class="mt-12">
+                            <h2 class="section-title">Photo Gallery (Sample Images)</h2>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                                <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Spacious and clean bedroom" class="gallery-image cursor-pointer">
+                                <img src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Large common area for groups" class="gallery-image cursor-pointer">
+                                <img src="https://images.pexels.com/photos/271643/pexels-photo-271643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Dining area for family meals" class="gallery-image cursor-pointer">
+                                <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Inviting private swimming pool" class="gallery-image cursor-pointer">
+                                <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Comfortable living room" class="gallery-image cursor-pointer">
+                                <img src="https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Function hall space for events" class="gallery-image cursor-pointer">
+                                <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Clean and modern interior" class="gallery-image cursor-pointer">
+                                <div id="view-all-photos-btn" class="relative rounded-lg overflow-hidden cursor-pointer group">
+                                    <img src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Nearby tropical beach" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+                                        <p class="text-white font-bold text-lg">View All Photos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Amenities -->
+                        <div class="mt-12">
+                            <h2 class="section-title">Amenities & Offerings</h2>
+                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-6">
+                                <div class="amenity-group">
+                                    <h4 class="font-bold text-lg mb-2">Property Features</h4>
+                                    <ul class="amenity-list">
+                                        <li>4 Air-Conditioned Bedrooms</li>
+                                        <li>3 Bathrooms</li>
+                                        <li>Fully Equipped Kitchen</li>
+                                        <li>Private Swimming Pool</li>
+                                        <li>Function Hall for Events</li>
+                                        <li>Secure On-site Parking</li>
+                                        <li>Videoke for Entertainment</li>
+                                    </ul>
+                                </div>
+                                <div class="amenity-group">
+                                    <h4 class="font-bold text-lg mb-2">Rental Options</h4>
+                                    <ul class="amenity-list">
+                                        <li>Entire House (Sleeps 24)</li>
+                                        <li>Function Hall Rental (for birthdays, weddings, etc.)</li>
+                                        <li>Pool Access Only (Day Use)</li>
+                                    </ul>
+                                </div>
+                             </div>
+                        </div>
+
+                        <!-- House Rules -->
+                        <div class="mt-12">
+                            <h2 class="section-title">House Rules</h2>
+                            <div class="prose max-w-none mt-6">
+                               <ul class="list-disc pl-5">
+                                   <li>Check-in is after 2:00 PM</li>
+                                   <li>Check-out is before 12:00 PM (Noon)</li>
+                                   <li>No smoking inside the house.</li>
+                                   <li>No pets allowed.</li>
+                                   <li>Please be mindful of noise, especially late at night.</li>
+                                   <li>Guests are responsible for cleaning up after their events.</li>
+                               </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Sticky Booking Card -->
+                    <div class="lg:col-span-1 mt-12 lg:mt-0">
+                        <div class="sticky top-28 bg-white p-8 rounded-xl shadow-lg border">
+                            <h3 class="text-2xl font-bold mb-4">Book Your Event or Stay</h3>
+                             <p class="text-gray-600 mb-6">Contact us directly for the best rates and to discuss your event needs.</p>
+                            <div class="space-y-4">
+                               <a href="https://www.airbnb.com/rooms/963363920958101320" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full">View on Airbnb</a>
+                               <a href="../contact.html" class="btn btn-primary w-full">Inquire Directly</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="modal-hidden fixed inset-0 bg-black bg-opacity-90 z-50 items-center justify-center p-4">
+        <button id="close-modal-btn" class="absolute top-4 right-6 text-white text-5xl opacity-80 hover:opacity-100">&times;</button>
+        
+        <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 p-2 rounded-full hover:bg-white/40">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 p-2 rounded-full hover:bg-white/40">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+        
+        <div class="relative w-full max-w-4xl max-h-full text-center">
+            <img id="modal-image" src="" alt="Full size property view" class="w-full h-auto max-h-[85vh] object-contain">
+            <div class="mt-4 text-white">
+                <p id="modal-caption" class="text-xl font-semibold"></p>
+                <p id="modal-counter" class="text-sm text-gray-300"></p>
+            </div>
+        </div>
+    </div>
+
+
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                 <div class="mb-4 md:mb-0">
                     <h3 class="text-xl font-bold">L&L Vacation Rentals</h3>
-                    <p class="text-gray-400">Napu, Badoc, Ilocos Norte, Philippines</p>
+                    <p class="text-gray-400">Binan, Calabarzon, Philippines</p>
                 </div>
                 <p class="text-gray-400 text-sm">&copy; 2025 L&L Vacation Rentals. All Rights Reserved.</p>
             </div>
@@ -103,11 +225,96 @@
     </footer>
 
     <script>
-        const btn = document.getElementById('menu-btn');
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
-        btn.addEventListener('click', () => {
+        menuBtn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
+        });
+
+        // --- Enhanced Photo Modal Logic ---
+        const modal = document.getElementById('photo-modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalCaption = document.getElementById('modal-caption');
+        const modalCounter = document.getElementById('modal-counter');
+        
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const viewAllPhotosBtn = document.getElementById('view-all-photos-btn');
+        
+        // --- Placeholder Images ---
+        const placeholderImages = [
+            { src: 'https://images.pexels.com/photos/221457/pexels-photo-221457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', caption: 'Exterior View with Pool' },
+            { src: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', caption: 'Spacious Bedroom' },
+            { src: 'https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', caption: 'Large Common Area' },
+            { src: 'https://images.pexels.com/photos/271643/pexels-photo-271643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', caption: 'Dining Area' },
+            { src: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', caption: 'Private Swimming Pool' },
+            { src: 'https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', caption: 'Comfortable Living Room' },
+            { src: 'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', caption: 'Event Function Hall' },
+            { src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', caption: 'Modern Interior' },
+            { src: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', caption: 'Nearby Tropical Beach' }
+        ];
+
+        let currentImageIndex = 0;
+
+        function updateModalContent() {
+            modalImage.src = placeholderImages[currentImageIndex].src;
+            modalCaption.textContent = placeholderImages[currentImageIndex].caption;
+            modalCounter.textContent = `Image ${currentImageIndex + 1} of ${placeholderImages.length}`;
+        }
+
+        function openModal(startIndex = 0) {
+            currentImageIndex = startIndex;
+            updateModalContent();
+            modal.classList.remove('modal-hidden');
+            modal.classList.add('modal-active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('modal-hidden');
+            modal.classList.remove('modal-active');
+            document.body.style.overflow = '';
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % placeholderImages.length;
+            updateModalContent();
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + placeholderImages.length) % placeholderImages.length;
+            updateModalContent();
+        }
+        
+        // --- Event Listeners ---
+        closeModalBtn.addEventListener('click', closeModal);
+        nextBtn.addEventListener('click', showNextImage);
+        prevBtn.addEventListener('click', showPrevImage);
+
+        viewAllPhotosBtn.addEventListener('click', () => openModal(0));
+
+        document.querySelectorAll('.gallery-image').forEach((img, index) => {
+            img.addEventListener('click', () => {
+                // For placeholders, we use the grid index to open the modal
+                openModal(index);
+                
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('modal-hidden')) {
+                if (e.key === 'ArrowRight') {
+                    showNextImage();
+                } else if (e.key === 'ArrowLeft') {
+                    showPrevImage();
+                } else if (e.key === 'Escape') {
+                    closeModal();
+                }
+            }
         });
     </script>
 </body>
 </html>
+
