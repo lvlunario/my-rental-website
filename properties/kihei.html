@@ -21,6 +21,10 @@
             }
         }
     </script>
+    <style>
+        .modal-hidden { display: none; }
+        .modal-active { display: flex; }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -111,13 +115,20 @@
                         <!-- Photo Gallery -->
                         <div class="mt-12">
                             <h2 class="section-title">Photo Gallery</h2>
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-                                <img src="../assets/images/kihei/Living_Room_Kitchen.jpg" alt="Open living space from kitchen" class="gallery-image">
-                                <img src="../assets/images/kihei/Kitchen2.jpg" alt="Modern kitchen with stainless steel appliances" class="gallery-image">
-                                <img src="../assets/images/kihei/Master_Bedroom.jpg" alt="Master bedroom with contemporary feel" class="gallery-image">
-                                <img src="../assets/images/kihei/Second_Bedroom.jpg" alt="Second bedroom with comfortable beds" class="gallery-image">
-                                <img src="../assets/images/kihei/Lanai.jpg" alt="Private lanai for outdoor relaxation" class="gallery-image">
-                                <img src="../assets/images/kihei/Beach2.jpg" alt="Golden sands of a nearby Maui beach" class="gallery-image">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                                <img src="../assets/images/kihei/Living_Room_Kitchen.jpg" alt="Open living space from kitchen" class="gallery-image cursor-pointer">
+                                <img src="../assets/images/kihei/Kitchen2.jpg" alt="Modern kitchen with stainless steel appliances" class="gallery-image cursor-pointer">
+                                <img src="../assets/images/kihei/Master_Bedroom.jpg" alt="Master bedroom with contemporary feel" class="gallery-image cursor-pointer">
+                                <img src="../assets/images/kihei/Second_Bedroom.jpg" alt="Second bedroom with comfortable beds" class="gallery-image cursor-pointer">
+                                <img src="../assets/images/kihei/Master_Bath.jpg" alt="Master bathroom with walk-in shower" class="gallery-image cursor-pointer">
+                                <img src="../assets/images/kihei/Lanai.jpg" alt="Private lanai for outdoor relaxation" class="gallery-image cursor-pointer">
+                                <img src="../assets/images/kihei/Living_Area.jpg" alt="Living area with large TV" class="gallery-image cursor-pointer">
+                                <div id="view-all-photos-btn" class="relative rounded-lg overflow-hidden cursor-pointer group">
+                                    <img src="../assets/images/kihei/Beach2.jpg" alt="Golden sands of a nearby Maui beach" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+                                        <p class="text-white font-bold text-lg">View All Photos</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -182,7 +193,7 @@
                         <div class="sticky top-28 bg-white p-8 rounded-xl shadow-lg border">
                             <h3 class="text-2xl font-bold mb-4">Book Your Getaway</h3>
                             <div class="space-y-4">
-                               <a href="#" class="btn btn-secondary w-full">Book on Airbnb</a>
+                               <a href="https://www.airbnb.com/rooms/1121532197495629823" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full">Book on Airbnb</a>
                                <a href="../contact.html" class="btn btn-primary w-full">Inquire Directly</a>
                             </div>
                             <p class="text-xs text-gray-500 mt-4 text-center">Please note: Quoted rate does not include State of Hawaii GET (4.167%) and TAT (10.25%) taxes. This will be added to your final booking total.</p>
@@ -192,6 +203,27 @@
             </div>
         </section>
     </main>
+    
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="modal-hidden fixed inset-0 bg-black bg-opacity-90 z-50 items-center justify-center p-4">
+        <button id="close-modal-btn" class="absolute top-4 right-6 text-white text-5xl opacity-80 hover:opacity-100">&times;</button>
+        
+        <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 p-2 rounded-full hover:bg-white/40">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 p-2 rounded-full hover:bg-white/40">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+        
+        <div class="relative w-full max-w-4xl max-h-full text-center">
+            <img id="modal-image" src="" alt="Full size property view" class="w-full h-auto max-h-[85vh] object-contain">
+            <div class="mt-4 text-white">
+                <p id="modal-caption" class="text-xl font-semibold"></p>
+                <p id="modal-counter" class="text-sm text-gray-300"></p>
+            </div>
+        </div>
+    </div>
+
 
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8">
@@ -206,10 +238,104 @@
     </footer>
 
     <script>
-        const btn = document.getElementById('menu-btn');
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
-        btn.addEventListener('click', () => {
+        menuBtn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
+        });
+
+        // --- Enhanced Photo Modal Logic ---
+        const modal = document.getElementById('photo-modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalCaption = document.getElementById('modal-caption');
+        const modalCounter = document.getElementById('modal-counter');
+        
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const viewAllPhotosBtn = document.getElementById('view-all-photos-btn');
+        
+        const imageFilenames = [
+            'main.jpg', 'Living_Room_Kitchen.jpg', 'Kitchen2.jpg', 'Kitchen_detail.jpg', 'Kitchen_eating_in.jpg',
+            'Living_Room.jpg', 'Living_Area.jpg', 'Living_Area_artwork.jpg', 'Living_Guest_Book.jpg', 'Lanai.jpg',
+            'Master_Bedroom.jpg', 'Master_Bath.jpg', 'Second_Bedroom.jpg', 'Second_Bathroom.jpg',
+            'home_away_from_home.jpg', 'beach_default.jpg', 'Beach2.jpg', 'beach.jpg', 'canvas.png'
+        ];
+
+        const allImages = imageFilenames.map(filename => {
+            return {
+                src: `../assets/images/kihei/${filename}`,
+                caption: generateCaption(filename)
+            };
+        });
+
+        let currentImageIndex = 0;
+
+        function generateCaption(filename) {
+            return filename
+                .split('.')[0]
+                .replace(/_/g, ' ')
+                .replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+        }
+
+        function updateModalContent() {
+            modalImage.src = allImages[currentImageIndex].src;
+            modalCaption.textContent = allImages[currentImageIndex].caption;
+            modalCounter.textContent = `Image ${currentImageIndex + 1} of ${allImages.length}`;
+        }
+
+        function openModal(startIndex = 0) {
+            currentImageIndex = startIndex;
+            updateModalContent();
+            modal.classList.remove('modal-hidden');
+            modal.classList.add('modal-active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('modal-hidden');
+            modal.classList.remove('modal-active');
+            document.body.style.overflow = '';
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % allImages.length;
+            updateModalContent();
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length;
+            updateModalContent();
+        }
+        
+        // --- Event Listeners ---
+        closeModalBtn.addEventListener('click', closeModal);
+        nextBtn.addEventListener('click', showNextImage);
+        prevBtn.addEventListener('click', showPrevImage);
+
+        viewAllPhotosBtn.addEventListener('click', () => openModal(0));
+
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', () => {
+                const path = new URL(img.src).pathname.replace(window.location.pathname.split('/').slice(0,-1).join('/'), '..');
+                const imageIndex = allImages.findIndex(imageObj => imageObj.src === path);
+                if (imageIndex !== -1) {
+                    openModal(imageIndex);
+                }
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('modal-hidden')) {
+                if (e.key === 'ArrowRight') {
+                    showNextImage();
+                } else if (e.key === 'ArrowLeft') {
+                    showPrevImage();
+                } else if (e.key === 'Escape') {
+                    closeModal();
+                }
+            }
         });
     </script>
 </body>
